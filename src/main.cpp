@@ -7,8 +7,9 @@ int main()
     {
         PlayerCharacter player;
         player = createCharacter();
-        player.getStats();
-        //run game
+       
+
+        
     }
     return 0;
 }
