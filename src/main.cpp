@@ -7,9 +7,6 @@ int main()
     {
         PlayerCharacter player;
         player = createCharacter();
-       
-
-        
     }
     return 0;
 }
