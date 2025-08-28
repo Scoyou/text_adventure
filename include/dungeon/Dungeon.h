@@ -19,7 +19,14 @@ class Dungeon
         int exit_room;
         
     public:
+        Dungeon();
 
+        void setStartingRoom(int id);
+        void setExitRoom(int id);
+        void addRoom(const Room& room);
+        void connectRooms(int roomA, int roomB);
+
+        Room& getRoom(int id) const;
 };
 
 #endif
