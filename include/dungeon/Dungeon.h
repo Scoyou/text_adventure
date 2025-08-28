@@ -9,6 +9,8 @@ struct Room {
     std::vector<int> connected_rooms;
     bool has_monster;
     bool has_treasure;
+
+    static int next_id;
 };
 
 class Dungeon
@@ -26,7 +28,7 @@ class Dungeon
         void addRoom(const Room& room);
         void connectRooms(int roomA, int roomB);
 
-        Room& getRoom(int id) const;
+        Room& getRoom(int id);
 };
 
 #endif
