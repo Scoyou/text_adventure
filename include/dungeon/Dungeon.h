@@ -11,6 +11,8 @@ struct Room {
     bool has_treasure;
 
     static int next_id;
+
+    Room();
 };
 
 class Dungeon

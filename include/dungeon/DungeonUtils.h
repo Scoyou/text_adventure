@@ -4,5 +4,6 @@
 #include "Dungeon.h"
 
 Dungeon createDungeon();
+Room createRoom();
 
 #endif
