@@ -16,8 +16,8 @@ class PlayerCharacter
         PlayableRace race;
         std::string description;
         int level;
-        float health;
-        float experience_points;
+        int health;
+        int experience_points;
 
     public:
 
@@ -26,8 +26,8 @@ class PlayerCharacter
             PlayableRace race=PlayableRace::Human,
             std::string description="",
             int level=1,
-            float health=100.00,
-            float experience_points=0.00);
+            int health=100,
+            int experience_points=0);
 
         std::string getName();
         PlayableRace getRace();
@@ -40,8 +40,8 @@ class PlayerCharacter
         void setRace(PlayableRace race);
         void setDescription(std::string description);
         void setLevel(int level);
-        void setHealth(float health_points);
-        void setExperiencePoints(float experience_points);
+        void setHealth(int health_points);
+        void setExperiencePoints(int experience_points);
 
         bool isAlive();
         void getStats();

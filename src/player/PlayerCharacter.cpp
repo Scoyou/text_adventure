@@ -6,9 +6,9 @@ PlayerCharacter::PlayerCharacter(
     PlayableRace race,
     std::string description,
     int level,
-    float health,
-    float experience_points)
-    : name(""), race(PlayableRace::Human), description(""), level(1), health(100.00), experience_points(0.00) {}
+    int health,
+    int experience_points)
+    : name(""), race(PlayableRace::Human), description(""), level(1), health(100), experience_points(0) {}
 
 std::string PlayerCharacter::getName() { return name; }
 PlayableRace PlayerCharacter::getRace() { return race; }
@@ -21,12 +21,12 @@ void PlayerCharacter::setName(std::string name) { this->name = name; }
 void PlayerCharacter::setRace(PlayableRace race) { this->race = race; }
 void PlayerCharacter::setDescription(std::string description) { this->description = description; }
 void PlayerCharacter::setLevel(int level) { this->level = level; }
-void PlayerCharacter::setHealth(float health_points) { this->health = health_points; }
-void PlayerCharacter::setExperiencePoints(float experience_points) { this->experience_points = experience_points; }
+void PlayerCharacter::setHealth(int health_points) { this->health = health_points; }
+void PlayerCharacter::setExperiencePoints(int experience_points) { this->experience_points = experience_points; }
 
 bool PlayerCharacter::isAlive()
 {
-    return this->health > 0.00;
+    return this->health > 0;
 }
 
 void PlayerCharacter::getStats()
