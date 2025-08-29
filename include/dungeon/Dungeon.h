@@ -9,6 +9,7 @@ struct Room {
     std::vector<int> connected_rooms;
     bool has_monster;
     bool has_treasure;
+    bool has_trap;
 
     static int next_id;
 
