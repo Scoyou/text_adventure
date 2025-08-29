@@ -33,15 +33,19 @@ int main() {
     for(int r = 0; r < rows; r++) {
         for(int c = 0; c < columns; c++) {
             if (r > 0) {
+                // North
                 dungeon.connectRooms(room_ids[r][c], room_ids[r - 1][c]);
             }
             if (r < rows - 1) {
+                // South
                 dungeon.connectRooms(room_ids[r][c], room_ids[r + 1][c]);
             }
             if (c > 0) {
+                // West
                 dungeon.connectRooms(room_ids[r][c], room_ids[r][c - 1]);
             }
             if (c < columns - 1) {
+                // East
                 dungeon.connectRooms(room_ids[r][c], room_ids[r][c + 1]);
             }
         }
