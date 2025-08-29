@@ -1,5 +1,4 @@
 #include "../../include/dungeon/RoomDataUtils.h"
-#include <iostream>
 #include <regex>
 
 std::string fillTemplate(

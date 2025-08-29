@@ -1,5 +1,4 @@
 #include "../../include/dungeon/Dungeon.h"
-#include <iostream>
 
 Dungeon::Dungeon() {}
 Room::Room() : id(++next_id), description(""), connected_rooms({}), has_monster(false), has_treasure(false) {}
