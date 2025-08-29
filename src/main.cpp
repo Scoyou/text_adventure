@@ -15,24 +15,40 @@ int main() {
     clearBuffer();
     player.getStats();
 
-    // Create rooms
-    std::vector<Room> rooms;
-    for (int i = 0; i < 5; i++) {
-        rooms.push_back(createRoom());
+    const int rows = 3;
+    const int columns = 3;
+
+    std::vector<std::vector<int>> room_ids(rows, std::vector<int>(columns));
+
+    for(int r = 0; r < rows; r++) {
+        for(int c = 0; c < columns; c++) {
+            Room room = createRoom();
+            int id = r * columns + c + 1;
+            room.id = id;
+            room_ids[r][c] = id;
+            dungeon.addRoom(room);
+        }
     }
 
-    // Add rooms to dungeon
-    for (Room &r : rooms) {
-        dungeon.addRoom(r);
+    for(int r = 0; r < rows; r++) {
+        for(int c = 0; c < columns; c++) {
+            if (r > 0) {
+                dungeon.connectRooms(room_ids[r][c], room_ids[r - 1][c]);
+            }
+            if (r < rows - 1) {
+                dungeon.connectRooms(room_ids[r][c], room_ids[r + 1][c]);
+            }
+            if (c > 0) {
+                dungeon.connectRooms(room_ids[r][c], room_ids[r][c - 1]);
+            }
+            if (c < columns - 1) {
+                dungeon.connectRooms(room_ids[r][c], room_ids[r][c + 1]);
+            }
+        }
     }
 
-    // Connect rooms linearly
-    for (size_t i = 0; i < rooms.size() - 1; i++) {
-        dungeon.connectRooms(rooms[i].id, rooms[i + 1].id);
-    }
-
-    dungeon.setStartingRoom(rooms.front().id);
-    dungeon.setExitRoom(rooms.back().id);
+    dungeon.setStartingRoom(room_ids[0][0]); // Top left room in grid
+    dungeon.setExitRoom(room_ids[rows - 1][columns - 1]); // bottom right room
 
     // Map directions to indices (0=N, 1=S, 2=E, 3=W)
     std::unordered_map<std::string, int> direction_map = {

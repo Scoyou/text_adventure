@@ -10,9 +10,7 @@ struct Room {
     bool has_monster;
     bool has_treasure;
     bool has_trap;
-
-    static int next_id;
-
+    
     Room();
 };
 
