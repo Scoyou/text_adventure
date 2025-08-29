@@ -32,6 +32,8 @@ class Dungeon
         void connectRooms(int roomA, int roomB);
 
         Room& getRoom(int id);
+        Room& getStartingRoom();
+        Room& getExitRoom();
 };
 
 #endif

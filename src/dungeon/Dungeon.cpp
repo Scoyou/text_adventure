@@ -8,5 +8,6 @@ void Dungeon::setExitRoom(int id) { this->exit_room = id; }
 void Dungeon::addRoom(const Room& room) { this->rooms[room.id] = room; }
 void Dungeon::connectRooms(int roomA, int roomB) { this->rooms[roomA].connected_rooms.push_back(roomB); }
 Room& Dungeon::getRoom(int id) { return this->rooms[id]; }
-
+Room& Dungeon::getStartingRoom() { return this->rooms[this->starting_room]; }
+Room& Dungeon::getExitRoom() { return this->rooms[this->exit_room]; }
 int Room::next_id = 0;
