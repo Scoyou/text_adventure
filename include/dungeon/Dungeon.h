@@ -10,9 +10,7 @@ struct Room {
     bool has_monster;
     bool has_treasure;
     bool has_trap;
-
-    static int next_id;
-
+    
     Room();
 };
 
@@ -32,6 +30,8 @@ class Dungeon
         void connectRooms(int roomA, int roomB);
 
         Room& getRoom(int id);
+        Room& getStartingRoom();
+        Room& getExitRoom();
 };
 
 #endif
