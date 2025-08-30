@@ -1,4 +1,4 @@
-#include "../../include/dungeon/RoomDataUtils.h"
+#include "dungeon/RoomDataUtils.h"
 #include <regex>
 
 std::string fillTemplate(

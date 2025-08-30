@@ -1,5 +1,5 @@
-#include "../../include/dungeon/DungeonUtils.h"
-#include "../../include/dungeon/RoomDataUtils.h"
+#include "dungeon/DungeonUtils.h"
+#include "dungeon/RoomDataUtils.h"
 #include <cstdlib>
 #include <ctime>
 

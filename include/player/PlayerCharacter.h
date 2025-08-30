@@ -18,6 +18,9 @@ class PlayerCharacter
         int level;
         int health;
         int experience_points;
+        int attack;
+        int defence;
+        int dexterity;
 
     public:
 
@@ -27,14 +30,20 @@ class PlayerCharacter
             std::string description="",
             int level=1,
             int health=100,
-            int experience_points=0);
+            int experience_points=0,
+            int attack=0,
+            int defence=0,
+            int dexterity=0);
 
         std::string getName();
         PlayableRace getRace();
         std::string getDescription();
         int getLevel();
-        float getHealth();
-        float getExperiencePoints();
+        int getHealth();
+        int getExperiencePoints();
+        int getAttack();
+        int getDefence();
+        int getDexterity();
 
         void setName(std::string name);
         void setRace(PlayableRace race);
@@ -42,6 +51,9 @@ class PlayerCharacter
         void setLevel(int level);
         void setHealth(int health_points);
         void setExperiencePoints(int experience_points);
+        void setAttack(int attack);
+        void setDefence(int defence);
+        void setDexterity(int dexterity);
 
         bool isAlive();
         void getStats();

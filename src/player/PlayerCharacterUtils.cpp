@@ -1,4 +1,4 @@
-#include "../../include/player/PlayerCharacterUtils.h"
+#include "player/PlayerCharacterUtils.h"
 #include <iostream>
 
 PlayerCharacter createCharacter()

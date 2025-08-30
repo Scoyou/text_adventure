@@ -1,4 +1,4 @@
-#include "../../include/dungeon/Dungeon.h"
+#include "dungeon/Dungeon.h"
 
 Dungeon::Dungeon() {}
 Room::Room() : id(0), description(""), connected_rooms({}), has_monster(false), has_treasure(false) {}

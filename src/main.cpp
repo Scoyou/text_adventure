@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../include/player/PlayerCharacterUtils.h"
-#include "../include/dungeon/DungeonUtils.h"
+#include "player/PlayerCharacterUtils.h"
+#include "dungeon/DungeonUtils.h"
 
 int clearBuffer()
 {

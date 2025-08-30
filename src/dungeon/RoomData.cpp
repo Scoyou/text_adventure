@@ -1,4 +1,4 @@
-#include "../../include/dungeon/RoomData.h"
+#include "dungeon/RoomData.h"
 #include <string>
 #include <vector>
 #include <regex>
