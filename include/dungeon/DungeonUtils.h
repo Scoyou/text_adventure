@@ -5,5 +5,6 @@
 
 Dungeon createDungeon();
 Room createRoom();
-
+void roomActions(Room& current_room);
+void roomNavigation(Room &current_room, Dungeon &dungeon);
 #endif
