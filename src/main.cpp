@@ -37,31 +37,23 @@ int main()
     {
         for (int c = 0; c < columns; c++)
         {
+            int current = room_ids[r][c];
+
             if (r > 0)
             {
-                dungeon.getRoom(room_ids[r][c]).connected_rooms["N"] = room_ids[r - 1][c];
-            }
-            if (r < rows - 1)
-            {
-                dungeon.getRoom(room_ids[r][c]).connected_rooms["S"] = room_ids[r + 1][c];
+                // Connect north/south
+                dungeon.connectRooms(current, "N", room_ids[r - 1][c], "S");
             }
             if (c > 0)
             {
-                dungeon.getRoom(room_ids[r][c]).connected_rooms["W"] = room_ids[r][c - 1];
-            }
-            if (c < columns - 1)
-            {
-                dungeon.getRoom(room_ids[r][c]).connected_rooms["E"] = room_ids[r][c + 1];
+                // Connect west/east
+                dungeon.connectRooms(current, "W", room_ids[r][c - 1], "E");
             }
         }
     }
 
     dungeon.setStartingRoom(room_ids[0][0]);              // Top left room in grid
     dungeon.setExitRoom(room_ids[rows - 1][columns - 1]); // bottom right room
-
-    // Map directions to indices (0=N, 1=S, 2=E, 3=W)
-    std::unordered_map<std::string, int> direction_map = {
-        {"N", 0}, {"S", 1}, {"E", 2}, {"W", 3}};
 
     Room &current_room = dungeon.getStartingRoom();
 
@@ -72,6 +64,13 @@ int main()
         std::cout << "Monster: " << current_room.has_monster
                   << ", Treasure: " << current_room.has_treasure
                   << ", Trap: " << current_room.has_trap << std::endl;
+
+        std::cout << "You can go: ";
+        for (const auto &kv : current_room.connected_rooms)
+        {
+            std::cout << kv.first << ", ";
+        }
+        std::cout << std::endl;
 
         std::cout << "Enter direction (N, S, E, W): ";
         std::string input;

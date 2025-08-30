@@ -49,12 +49,34 @@ namespace RoomData
         "rot and decay", "damp earth and mold", "stale blood and iron", "burnt oil and smoke",
         "sulfur and ash", "wet stone", "mildew and fungus", "ancient dust", "animal musk", "smoldering wood"};
     const std::vector<std::string> features = {
-        "a chest", "a door", "a trap", "a monster", "a treasure chest",
-        "an altar", "a skeleton", "a broken statue", "a glowing rune", "a hidden lever"};
+        "a door", "a trap", "an altar", "a skeleton", "a broken statue", "a glowing rune", "a hidden lever"};
     const std::vector<std::string> room_types = {
         "cave", "cavern", "dungeon", "hall", "room",
         "crypt", "cellar", "chamber", "passage", "lair"};
     const std::vector<std::string> adjectives = {
         "dark", "dangerous", "dusty", "empty", "foggy",
         "cramped", "echoing", "twisting", "flooded", "gloomy"};
+    const std::vector<std::string> traps = {
+        "snare", "pit", "lava", "spikes", "poison"};
+    std::vector<std::string> monster_actions = {
+        "stares at you menacingly",
+        "lets out a terrifying roar",
+        "launches forward to attack",
+        "bares its sharp fangs",
+        "swipes with its claws",
+        "breathes fire in your direction",
+        "stomps the ground fiercely",
+        "snarls and growls",
+        "circles you like a predator",
+        "lashes out with its tail",
+        "prepares to pounce",
+        "charges with reckless fury",
+        "howls into the night",
+        "raises its weapon high",
+        "emits a bone-chilling screech",
+        "slams the ground, shaking the earth",
+        "glows with a dark aura",
+        "summons lesser creatures to its side",
+        "fixes its glowing eyes on you",
+        "creeps closer, step by step"};
 }

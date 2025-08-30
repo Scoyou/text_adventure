@@ -43,3 +43,11 @@ PlayerCharacter createCharacter()
 
     return pc;
 }
+
+int makeChoice()
+{
+    int choice;
+    std::cout << "Enter your choice: ";
+    std::cin >> choice;
+    return choice;
+}

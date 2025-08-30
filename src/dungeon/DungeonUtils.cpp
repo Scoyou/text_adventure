@@ -30,10 +30,9 @@ Room createRoom()
                                            {"light_level", light_level},
                                            {"ambient_effect", ambient_effect}});
 
-    room.has_monster = (feature == "a monster");
-    room.has_treasure = (feature == "a chest" || feature == "a treasure chest");
-    room.has_trap = (feature == "a trap") ||
-                    ((feature == "a chest" || feature == "a treasure chest" || feature == "a hidden lever") && rand() % 2);
+    room.has_monster = rand() % 2;
+    room.has_treasure = rand() % 2;
+    room.has_trap = (!room.has_monster && rand() % 2); // don't trap rooms with a monster
 
     return room;
 }

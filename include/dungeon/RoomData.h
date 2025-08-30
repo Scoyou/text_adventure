@@ -15,6 +15,7 @@ namespace RoomData
     extern const std::vector<std::string> light_levels;
     extern const std::vector<std::string> ambient_effects;
     extern const std::vector<std::string> templates;
+    extern const std::vector<std::string> traps;
 }
 
 #endif
