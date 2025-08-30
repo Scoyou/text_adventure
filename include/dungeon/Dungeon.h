@@ -6,7 +6,7 @@
 struct Room {
     int id;
     std::string description;
-    std::vector<int> connected_rooms;
+    std::unordered_map<std::string, int> connected_rooms;
     bool has_monster;
     bool has_treasure;
     bool has_trap;
@@ -27,7 +27,7 @@ class Dungeon
         void setStartingRoom(int id);
         void setExitRoom(int id);
         void addRoom(const Room& room);
-        void connectRooms(int roomA, int roomB);
+        void connectRooms(int roomA, const std::string& dirA, int roomB, const std::string& dirB);
 
         Room& getRoom(int id);
         Room& getStartingRoom();
