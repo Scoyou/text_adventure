@@ -1,8 +1,7 @@
-#ifndef ROOM_DATA_UTILS
-#define ROOM_DATA_UTILS
+#ifndef RANDOM_UTILS
+#define RANDOM_UTILS
 #include <iostream>
 #include <random>
-#include "RoomData.h"
 
 // Returns a random element from the given vector using a uniform distribution.
 template <typename T>

@@ -1,8 +1,10 @@
 #include "dungeon/DungeonUtils.h"
-#include "dungeon/RoomDataUtils.h"
+#include "random/RandomUtils.h"
+#include "monster/MonsterUtils.h"
+#include "dungeon/RoomData.h"
+
 #include <cstdlib>
 #include <ctime>
-#include "monster/MonsterUtils.h"
 
 Dungeon createDungeon()
 {
@@ -43,7 +45,7 @@ void roomActions(Room &current_room)
     if (current_room.has_monster)
     {
         std::cout << "You see a monster!" << std::endl;
-        Monster monster = createMonster("Goblin", "A small goblin", "Goblin", 10, 5, 2);
+        Monster monster = createMonster();
 
         std::cout << "Name: " << monster.getName() << std::endl;
         std::cout << "Description: " << monster.getDescription() << std::endl;

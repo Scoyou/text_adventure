@@ -3,6 +3,6 @@
 
 #include "Monster.h"
 
-Monster createMonster(std::string name, std::string description, std::string race, int health, int attack, int defense);
+Monster createMonster();
 
 #endif

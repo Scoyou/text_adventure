@@ -58,25 +58,4 @@ namespace RoomData
         "cramped", "echoing", "twisting", "flooded", "gloomy"};
     const std::vector<std::string> traps = {
         "snare", "pit", "lava", "spikes", "poison"};
-    std::vector<std::string> monster_actions = {
-        "stares at you menacingly",
-        "lets out a terrifying roar",
-        "launches forward to attack",
-        "bares its sharp fangs",
-        "swipes with its claws",
-        "breathes fire in your direction",
-        "stomps the ground fiercely",
-        "snarls and growls",
-        "circles you like a predator",
-        "lashes out with its tail",
-        "prepares to pounce",
-        "charges with reckless fury",
-        "howls into the night",
-        "raises its weapon high",
-        "emits a bone-chilling screech",
-        "slams the ground, shaking the earth",
-        "glows with a dark aura",
-        "summons lesser creatures to its side",
-        "fixes its glowing eyes on you",
-        "creeps closer, step by step"};
 }
